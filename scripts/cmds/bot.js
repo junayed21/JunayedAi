@@ -18,7 +18,7 @@ module.exports = {
             "Kya Tu ELvish Bhai Ke Aage Bolega🙄", 
             "Cameraman Jaldi Focus Kro 📸", 
             "Lagdi Lahore di aa🙈", 
-            "Chay pe Chaloge", 
+            "oi jan ummmmaaahhhhh", 
             "Mere liye Chay Bana Kar LA ,Pura din Dekho Bot BoT🙄", 
             "Din vicho tere Layi Teym Kadd ke, Kardi me Promise Milan aungi", 
             "Yee bat Delhi tak jayegi", 
@@ -64,18 +64,7 @@ module.exports = {
             "Mujhe bhi koi gulab chocolate dedo hum koi gair hai kya😥", 
             "akh ladi bado badi", 
             "haaye garmi😕", 
-            "Ao kabhi haweli pe😍",
-            "Kiss colour ki chaddi pehenteho",
-            "mujhse shadi karogi",
-            "Jan, Ummmah diye deo😻",
-            "Ji Jan ki hoise"
-            "Jan kisu bolba"
-            "tissue lelohh🤪"
-            "ahh ahhh uhh uhh Dakso keno?",
-            "ajana chule meri chunri sanam"
-            "kache aso na aro kache aso na"
-            "call me bby"
-            "jan ummmmaaahhhhhhhh"
+            "Ao kabhi haweli pe😍"
         ];
 
         const Prefixes = ['bot', 'Bot'];

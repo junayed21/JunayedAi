@@ -5,10 +5,10 @@ const baseApiUrl = async () => {
 };
 
 module.exports.config = {
-  name: "Junayed",
-  aliases: ["junu","junayed","Junayed"],
+  name: "bby",
+  aliases: ["Junayed", "junayed", "junu"],
   version: "6.9.0",
-  author: "d",
+  author: "dipto",
   countDown: 0,
   role: 0,
   description: "better then all sim simi",
@@ -53,7 +53,7 @@ module.exports.onStart = async ({ api, event, args, usersData }) => {
         }));
         teachers.sort((a, b) => b.value - a.value);
         const output = teachers.map((t, i) => `${i + 1}/ ${t.name}: ${t.value}`).join('\n');
-        return api.sendMessage(`Total Teach = ${data.length}\n | List of Teachers of baby\n${output}`, event.threadID, event.messageID);
+        return api.sendMessage(`Total Teach = ${data.length}\n👑 | List of Teachers of baby\n${output}`, event.threadID, event.messageID);
       } else {
         const d = (await axios.get(`${link}?list=all`)).data.length;
         return api.sendMessage(`Total Teach = ${d}`, event.threadID, event.messageID);
@@ -143,9 +143,16 @@ module.exports.onReply = async ({ api, event, Reply }) => {
 module.exports.onChat = async ({ api, event,message }) => {
   try{
     const body = event.body ? event.body.toLowerCase() : ""
-    if(body.startsWith("junayed") || body.startsWith("junu") || body.startsWith("janu")){
+    if(body.startsWith("junayed") || body.startsWith("Junayed") || body.startsWith("janu")){
       const arr = body.replace(/^\S+\s*/, "")
-      if(!arr) return message.reply(" Ki hoise😾  ")
+      if(!arr){ api.sendMessage("Yes 😀, i am here", event.threadID, (error, info) => {
+      global.GoatBot.onReply.set(info.messageID, {
+        commandName: this.config.name,
+        type: "reply",
+        messageID: info.messageID,
+        author: event.senderID
+      });
+    }, event.messageID);}
     const a = (await axios.get(`${await baseApiUrl()}/baby?text=${encodeURIComponent(arr)}&senderID=${event.senderID}&font=1`)).data.reply;
     await api.sendMessage(a, event.threadID, (error, info) => {
       global.GoatBot.onReply.set(info.messageID, {
